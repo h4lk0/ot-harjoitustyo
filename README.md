@@ -1,9 +1,5 @@
 # Ohjelmistotekniikka, harjoitustyö
 ## Tehtävät
 ### Viikko1
-
-Tämä on tiedoston ensimmäinen lause aivan tavallisella tekstillä. *Tässä taas on kursivoitua tekstiä.*
-
-**Tällä rivillä onkin sitten lihavoitua tekstiä.**
-
-Toivottavasti tämä nyt toimii
+[gitlog.txt](https://github.com/h4lk0/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/h4lk0/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
