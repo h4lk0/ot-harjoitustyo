@@ -1,4 +1,9 @@
 # Ohjelmistotekniikka, harjoitustyö
+## Harjoitustyö
+[Alustava määrittelydokumentti](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/Dokumentaatio/vaatimusmaarittely.md)
+
+[Työaikakirjanpito](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/Dokumentaatio/tuntikirjanpito.md)
+
 ## Tehtävät
 ### Viikko1
 [gitlog.txt](https://github.com/h4lk0/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
