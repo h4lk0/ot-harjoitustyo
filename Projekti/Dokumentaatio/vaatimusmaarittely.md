@@ -19,5 +19,5 @@ Sovelluksen tarkoitus on tarjota käyttäjälle ohjelma, jolla voi suorittaa kie
 ## Jatkokehitysideoita
 
 - Lisää erilaisia tehtävätyyppejä
-- Sanalistojen tuonti tiedostoista
+- Sanalistojen tuonti tiedostosta
 - Vaihtoehtoisia kieliä
