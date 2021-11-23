@@ -1,20 +1,13 @@
-# Ohjelmistotekniikka, harjoitustyö
-## Harjoitustyö
-[Alustava määrittelydokumentti](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/Dokumentaatio/vaatimusmaarittely.md)
+# Ohjelmistotekniikan harjoitustyö
+Käyttäjä voi sovelluksen avulla tehdä vieraan kielen sanastoon liittyviä kertaustehtäviä.
+## Python-versio
+Sovelluksen toiminta on testattu Pythonin versiolla `3.8`, sovellus ei välttämättä ole yhteensopiva vanhempien Python-versioiden kanssa.
+## Dokumentaatio
+- [Alustava määrittelydokumentti](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/Dokumentaatio/vaatimusmaarittely.md)
+- [Työaikakirjanpito](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/Dokumentaatio/tuntikirjanpito.md)
 
-[Työaikakirjanpito](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/Dokumentaatio/tuntikirjanpito.md)
+## Asennus
+TULOSSA
 
-## Tehtävät
-### Viikko1
-[gitlog.txt](https://github.com/h4lk0/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/h4lk0/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
-### Viikko2
-[maksukortti](https://github.com/h4lk0/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
-
-[unicafe](https://github.com/h4lk0/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
-
-[Coverage.png](https://github.com/h4lk0/ot-harjoitustyo/blob/master/laskarit/viikko2/test%20coverage.png)
-
-### Viikko3
+## Komentorivitoiminnot
+TULOSSA
