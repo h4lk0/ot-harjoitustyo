@@ -1,0 +1,11 @@
+.vscode
+.DS_store
+.coverage
+.pytest_cache
+htmlcov
+__pycache__
+*.py[cod]
+*$py.class
+
+#temporary
+data/nouns.txt
