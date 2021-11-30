@@ -7,6 +7,7 @@ authors = ["h4lk0 <jenni.e.halkola@helsinki.fi>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 invoke = "^1.6.0"
+python-dotenv = "^0.19.2"
 
 [tool.poetry.dev-dependencies]
 coverage = "^6.1.2"

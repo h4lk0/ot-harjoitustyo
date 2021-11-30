@@ -1,7 +1,8 @@
-import exercise
+from entities.exercise_types import Exercise
 
 def main():
-    exercise.Exercise()
+    test = Exercise()
+    test.multiple_choice()
 
 if __name__ == '__main__':
     main()

@@ -7,5 +7,4 @@ __pycache__
 *.py[cod]
 *$py.class
 
-#temporary
-data/nouns.txt
+/database_creation_dev_only
