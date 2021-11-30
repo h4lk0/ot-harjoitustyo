@@ -1,8 +1,8 @@
-from entities.exercise_types import Exercise
+import services.app_logic
 
 def main():
-    test = Exercise()
-    test.multiple_choice()
+    program = services.app_logic.Logic()
+    program.initialize()
 
 if __name__ == '__main__':
     main()

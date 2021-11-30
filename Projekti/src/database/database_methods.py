@@ -1,12 +1,11 @@
-from table_names import table_getter
-from database_connection import get_connection
+import sqlite3
+from config import DATABASE_FILE_PATH
 
 class Database:
 
     def __init__(self):
-        self.connection = get_connection()
-        return self.connection
+        self.connection = sqlite3.connect(DATABASE_FILE_PATH)
 
-    def get_table(self, name):
-        table = self.connection.execute(table_getter(name)).fetchall
+    def get_table_nouns(self):
+        table = self.connection.execute("SELECT eng, kor FROM Nouns").fetchall()
         return table
