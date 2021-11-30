@@ -8,4 +8,5 @@
 | 23.11.| 5,0  | Alustavan sovelluslogiikan koodaamista |
 | 29.11.| 1,5  | Ohjelman rakenteen ja tietokannan suunnittelua
 | 30.11.| 7,0  | Koodausta
-| Yhteensä | 16,5| 
+| 30.11.| 1,0  | Sekvenssikaavio
+| Yhteensä | 17,5| 
