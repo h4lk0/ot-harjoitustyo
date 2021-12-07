@@ -9,4 +9,13 @@
 | 29.11.| 1,5  | Ohjelman rakenteen ja tietokannan suunnittelua
 | 30.11.| 7,0  | Koodausta
 | 30.11.| 1,0  | Sekvenssikaavio
-| Yhteensä | 17,5| 
+| 7.12. | 1,5  | Koodausta
+| 7.12. | 1,0  | Dokumentaation päivitystä
+| Yhteensä | 20| 
+
+## TODO
+- Koodin rakenteen järkevöittäminen labtools-kommenttien perusteella
+
+- **Testien tekemiseen syvempi tutustuminen ja testien kirjoittaminen**
+
+- Graafinen käyttöliittymä
