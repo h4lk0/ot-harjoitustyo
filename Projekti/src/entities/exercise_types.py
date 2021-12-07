@@ -23,7 +23,7 @@ class Exercise:
             print("Well done!")
         else:
             print("Incorrect")
-   
+
 
     def fill_in(self, table):
         options, asked, answer = self.get_options(table)
@@ -41,6 +41,6 @@ class Exercise:
         print(kor)
         user_input = str(input("Type '1' to show English translation: "))
         if user_input == "1":
-            print(eng) 
+            print(eng)
         else:
             pass
