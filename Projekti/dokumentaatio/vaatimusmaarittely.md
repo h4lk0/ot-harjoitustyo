@@ -14,7 +14,7 @@ Sovelluksen tarkoitus on tarjota käyttäjälle ohjelma, jolla voi suorittaa kie
   - Sanaston kertaus ns. *flashcardien* avulla [ALUSTAVA VERSIO]
   - Sanaston kertaus monivalinnalla [TEHTY]
   - Verbien taivutusten kertaus monivalinnalla
-  - Mahdollisuus lisätä omia sanoja ja tehdä omia sanalistoja
+  - Mahdollisuus lisätä omia sanoja ja tehdä omia sanalistoja [JÄLKIMMÄINEN TEHTY]
   
 ## Jatkokehitysideoita
 
