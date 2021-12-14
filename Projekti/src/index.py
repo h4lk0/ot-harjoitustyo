@@ -1,12 +1,17 @@
-import services.app_logic
+from tkinter import ttk, Tk
+from ui.ui import Ui
 
 def main():
-    program = services.app_logic.Logic()
-    command = input("Practice(1) or create new wordlist(2): ")
-    if command == "2":
-        program.new_wordlist()
-    else:
-        program.initialize()
+    window = Tk()
+    window.title("Language practice")
+    window.geometry("500x200")
+    theme = ttk.Style()
+    theme.theme_use("alt")
+
+    Ui(window)
+
+    window.mainloop()
+
 
 if __name__ == '__main__':
     main()

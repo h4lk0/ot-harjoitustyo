@@ -1,4 +1,4 @@
-from manage_lists_view import ListView
+from ui.manage_lists_view import ListView
 from tkinter import Text, ttk
 
 class StartView:
