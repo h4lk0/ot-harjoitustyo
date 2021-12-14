@@ -6,7 +6,7 @@ Sovelluksen toiminta on testattu Pythonin versiolla `3.8`, sovellus ei välttäm
 - [Alustava määrittelydokumentti](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/vaatimusmaarittely.md)
 - [Työaikakirjanpito](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/tuntikirjanpito.md)
 - [Arkitehtuurikuvaus](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/arkitehtuuri.md)
-- [Release](https://github.com/h4lk0/ot-harjoitustyo/releases/tag/viikko5)
+- [Release](https://github.com/h4lk0/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Asennus
 
