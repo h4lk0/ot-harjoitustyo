@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa uusin projektin [viimeisin versio](linkki)
+Lataa uusin projektin viimeisin versio [täältä](https://github.com/h4lk0/ot-harjoitustyo/releases).
 
 ## Käynnistäminen
 
