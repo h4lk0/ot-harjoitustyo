@@ -11,11 +11,15 @@
 | 30.11.| 1,0  | Sekvenssikaavio
 | 7.12. | 1,5  | Koodausta
 | 7.12. | 1,0  | Dokumentaation päivitystä
-| Yhteensä | 20| 
+| 10.12.| 2,5  | Tkinteriin tutustumista
+| 13.12.| 4,0  | Graafisen käyttöliittymän koodausta
+| 14.12.| 3,0  | Koodausta
+| 14.12.| 1,5  | Dokumentaation tekoa
+| Yhteensä | 31| 
 
 ## TODO
-- Koodin rakenteen järkevöittäminen labtools-kommenttien perusteella
+- Koodin rakenteen järkevöittäminen labtools-kommenttien perusteella (WiP)
 
 - **Testien tekemiseen syvempi tutustuminen ja testien kirjoittaminen**
 
-- Graafinen käyttöliittymä
+- Graafinen käyttöliittymä (WiP)
