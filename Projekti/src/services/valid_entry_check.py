@@ -7,7 +7,7 @@ class Checks:
     def __init__(self):
         """Constructor
         """
-        pass
+        self._exceptions = "/()' "
 
     def eng_is_valid(self, word):
         """Checks if given contains only latin characters
@@ -22,7 +22,7 @@ class Checks:
         """
         valid = True
         for i in enumerate(word):
-            if i[1] not in ascii_letters:
+            if i[1] not in ascii_letters or i[1] not in self._exceptions:
                 valid = False
         return valid
 

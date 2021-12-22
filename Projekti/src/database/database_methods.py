@@ -34,13 +34,14 @@ class Database:
                     True, if table was created
                     False, if it already exists
         """
+        created = False
         if not self._db[table_name].exists():
             self._db[table_name].create({
                 "eng": str,
                 "kor": str
             })
-            return True
-        return False
+            created = True
+        return created
 
     def add_to_list(self, table_name, eng, kor):
         """Adds a single entry to given table

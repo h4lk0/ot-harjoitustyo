@@ -1,5 +1,5 @@
 from database.database_methods import Database
-from tkinter import Button, filedialog, StringVar, Toplevel, ttk
+from tkinter import filedialog, StringVar, Toplevel, ttk
 
 class ListView:
 
@@ -48,19 +48,23 @@ class ListView:
 
     def _add_new_wordlist(self, name):
         passed = self._db.create_new_table(name)
-        if passed == False:
+        if not passed:
             self._lbl_added["text"] = "List already exists!"
-        else:
-            self._show_edit_view()
-            self._lbl_added["text"] = "List created successfully"
+        if passed:
+            self._lbl_added["text"] = "List created successfully!"
+            self._update_combobox()
+
+    def _update_combobox(self):
+        list = self._get_wordlists()
+        self._wordlist["values"] = list
 
     def _get_wordlists(self):
         table_names = self._db.get_table_names()
         return table_names
 
     def _add_from_file(self):
-        file = filedialog.askopenfilename(filetypes=(".csv","*.csv"))
-        passed = self._db.add_from_file(self._wordlist.get(),file)
+        file = filedialog.askopenfilename(filetypes=((".csv","*.csv"),))
+        passed = self._db.add_from_file(self._listvar.get(),file)
 
         if passed == False:
             self._lbl_added["text"] = "File contains invalid entries"
@@ -99,7 +103,7 @@ class ListView:
         lbl_or = ttk.Label(master=self._frame, text="OR")
         self._lbl_result = ttk.Label(master=self._frame, text="")
 
-        self._entry_list_name.insert(0, self._wordlist.get())
+        self._entry_list_name.insert(0, self._listvar.get())
         self._entry_list_name.config(state="readonly")
 
         btn_add.grid(row=4, column=0)
