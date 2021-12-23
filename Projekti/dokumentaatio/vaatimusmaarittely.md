@@ -14,18 +14,18 @@ Perusversio tarjoaa harjoituksia korean kielen sanaston kertaamiseen.
 ### Harjoitukset
 - Tehtävävalikko, jossa käyttäjä valitsee tehtävätyypin ja kerrattavan sanaston
 - Kolme harjoitustyyppiä
-  1. Monivalinta jossa 
-   - Käyttäjä valitsee annettua koreankielistä sanaa vastaavan englanninkielisen sanan viidestä vaihtoehdosta
-  2. Tyhjä aukko
-   - Käyttäjä kirjoittaa annettua sanaa vastaavan englanninkielisen sanan
-  3. Opettelukortti
-   - Sanojen kertausta perinteisellä muistelulla. Ohjelma arpoo koreankielisen sanan, jonka käännöksen voi tarkistaa napinpainalluksella. Kielten välillä voi liikkua rajattomasti, kunnes käyttäjä arpoo uuden sanan
+  - Monivalinta
+    - Käyttäjä valitsee annettua koreankielistä sanaa vastaavan englanninkielisen sanan viidestä vaihtoehdosta
+  - Tyhjä aukko
+    - Käyttäjä kirjoittaa annettua sanaa vastaavan englanninkielisen sanan
+  - Opettelukortti
+    - Sanojen kertausta perinteisellä muistelulla. Ohjelma arpoo koreankielisen sanan, jonka käännöksen voi tarkistaa napinpainalluksella. Kielten välillä voi liikkua rajattomasti, kunnes käyttäjä arpoo uuden sanan
 
 ### Sanalistanäkymä
  - Käyttäjä voi luoda uuden sanalistan
  - Olemassa oleviin sanalistoihin voi lisätä uusia sanoja
-  - Yksitellen
-  - .csv-tiedostosta
+    - Yksitellen
+    - .csv-tiedostosta
 
 ## Jatkokehitysideoita
 
