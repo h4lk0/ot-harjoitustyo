@@ -8,11 +8,10 @@ def main():
     theme = ttk.Style()
     theme.theme_use("alt")
 
-    ui = Ui(window)
+    Ui(window)
     theme.configure("main_frame", background="red")
 
     window.mainloop()
-
 
 if __name__ == '__main__':
     main()

@@ -11,7 +11,7 @@ class Exercise:
 
     def new_values(self):
         self._answer, self._options = self._logic.randomize()
-    
+
     def get_answer(self):
         return self._answer
 
@@ -32,4 +32,3 @@ class Exercise:
         if chosen in self._answer["eng"]:
             return True
         return False
-

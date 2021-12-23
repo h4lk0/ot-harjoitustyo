@@ -1,5 +1,5 @@
-from database.database_methods import Database
 from random import choice, choices
+from database.database_methods import Database
 
 class Logic:
 
@@ -28,9 +28,3 @@ class Logic:
         answer = choice(options)
 
         return answer, options
-
-
-    
-    
-
-

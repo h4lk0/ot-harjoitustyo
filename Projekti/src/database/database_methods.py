@@ -1,4 +1,3 @@
-import sqlite3
 import sqlite_utils as sql
 from config import DATABASE_FILE_PATH
 from services.csv_handler import ListFromCSV
@@ -77,7 +76,7 @@ class Database:
         Returns:
             boolean:
                     False, if all entries not valid
-                    True, if all entries inserted successfully  
+                    True, if all entries inserted successfully
         """
         to_add = self.converter.file_to_list(file)
         valid = self._validate_list(to_add)
@@ -87,13 +86,13 @@ class Database:
         return True
 
     def _validate_list(self, wordlist):
-        
+
         valid = True
         for entry in wordlist:
             if not self._checker.eng_is_valid(entry["eng"]):
-               valid = False
+                valid = False
             if not self._checker.kor_is_valid(entry["kor"]):
-               valid = False
+                valid = False
         return valid
 
     def get_table(self, table_name):

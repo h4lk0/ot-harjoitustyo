@@ -17,7 +17,8 @@ class Checks:
 
         Returns:
             boolean:
-                    False, if string contains other than english alphabet, spaces, or characters (, ), /, '
+                    False, if string contains other than english alphabet,
+                     spaces, or characters (, ), /, '
                     True, if only english alphabet or defined punctuation are present
         """
         valid = True
