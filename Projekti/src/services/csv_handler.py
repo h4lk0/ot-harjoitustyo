@@ -6,7 +6,6 @@ class ListFromCSV:
         """Class constructor
         """
         self._list = []
-        self._exceptions = "/()"
 
     def file_to_list(self, file_name):
         """Converts rows into dictionaries and adds them to a list
@@ -20,6 +19,7 @@ class ListFromCSV:
         with open(file_name, encoding="utf-8") as csv_file:
             for line in csv_file:
                 line = line.replace("\n","")
+                line.strip()
                 parts = line.split(",")
                 eng = parts[0]
                 kor = parts[1]

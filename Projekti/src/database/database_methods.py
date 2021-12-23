@@ -11,8 +11,9 @@ class Database:
     def __init__(self):
         """Creates a new database management interface
         """
-        self._db = sql.Database(sqlite3.connect(DATABASE_FILE_PATH))
+        self._db = sql.db.Database(DATABASE_FILE_PATH)
         self._checker = Checks()
+        self.converter = ListFromCSV()
 
     def get_table_names(self):
         """Fetches all table names from database
@@ -39,7 +40,7 @@ class Database:
             self._db[table_name].create({
                 "eng": str,
                 "kor": str
-            })
+            }, pk="kor")
             created = True
         return created
 
@@ -58,12 +59,12 @@ class Database:
                 2 = insert successful
         """
         passed = 2
-        if self._checker.eng_is_valid(eng) is False:
+        if not self._checker.eng_is_valid(eng):
             passed = 0
-        if self._checker.kor_is_valid(kor) is False:
+        if not self._checker.kor_is_valid(kor):
             passed = -1
         else:
-            self._db[table_name].insert({"eng": eng, "kor": kor})
+            self._db[table_name].insert({"eng": eng, "kor": kor}, pk="kor", replace=True)
         return passed
 
     def add_from_file(self, table_name, file):
@@ -78,31 +79,21 @@ class Database:
                     False, if all entries not valid
                     True, if all entries inserted successfully  
         """
-        convert = ListFromCSV()
-        to_add = convert.file_to_list(file)
+        to_add = self.converter.file_to_list(file)
         valid = self._validate_list(to_add)
         if not valid:
             return False
-        self._db[table_name].insert_all(to_add)
+        self._db[table_name].insert_all(to_add, pk="kor", replace=True)
         return True
 
     def _validate_list(self, wordlist):
-        """Checks if all entries in wordlist for invalid characters
-
-        Args:
-            wordlist (list): List of dictionaries containing database entries
-
-        Returns:
-            boolean: 
-                    False, if any entry contains invalid characters
-                    True, if all entries valid
-        """
+        
         valid = True
         for entry in wordlist:
             if not self._checker.eng_is_valid(entry["eng"]):
-                valid = False
+               valid = False
             if not self._checker.kor_is_valid(entry["kor"]):
-                valid = False
+               valid = False
         return valid
 
     def get_table(self, table_name):
@@ -118,3 +109,19 @@ class Database:
         for row in self._db[table_name].rows_where(select="eng, kor"):
             wordlist.append(row)
         return wordlist
+
+    def drop_table(self, table_name):
+        """Drops table from database if it exists
+
+        Args:
+            table_name (str): Name of table being deleted
+        """
+        self._db[table_name].drop(ignore=True)
+
+    def clear_table(self, table_name):
+        """Deletes all rows in given table
+
+        Args:
+            table_name (str): table being cleared
+        """
+        self._db[table_name].delete_where()

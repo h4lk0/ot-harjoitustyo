@@ -72,9 +72,10 @@ class ListView:
             self._lbl_added["text"] = "Words added successfully"
 
     def _add_wordlist_entry(self):
-        eng = self._entry_eng.get()
-        kor = self._entry_kor.get()
-        passed = self._db.add_to_list(eng, kor)        
+        eng = self._e.get()
+        kor = self._k.get()
+        table = self._listvar.get()
+        passed = self._db.add_to_list(table, eng, kor)        
 
         if passed == 0:
             self._lbl_result["text"] = "Invalid entry 'Eng'"
@@ -96,8 +97,10 @@ class ListView:
         lbl_kor = ttk.Label(master=self._frame, text="KOR")
         lbl_wordlist = ttk.Label(master=self._frame, text="Wordlist")
         btn_add = ttk.Button(master=self._frame, text="Add to list", command=self._add_wordlist_entry)
-        self._entry_eng = ttk.Entry(master=self._frame)
-        self._entry_kor = ttk.Entry(master=self._frame)
+        self._k = StringVar()
+        self._e = StringVar()
+        self._entry_eng = ttk.Entry(master=self._frame, textvariable=self._e)
+        self._entry_kor = ttk.Entry(master=self._frame, textvariable=self._k)
         self._entry_list_name = ttk.Entry(master=self._frame)
         btn_from_file = ttk.Button(master=self._frame, text="Add from .csv", command=self._add_from_file)
         lbl_or = ttk.Label(master=self._frame, text="OR")
@@ -118,4 +121,3 @@ class ListView:
 
         btn_from_file.grid(row=6, column=0, columnspan=5, sticky="n")
         self._lbl_result.grid(row=7, column=0, columnspan=5)
-

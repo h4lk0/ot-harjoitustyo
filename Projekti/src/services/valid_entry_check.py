@@ -17,12 +17,12 @@ class Checks:
 
         Returns:
             boolean:
-                    False, if string contains other than latin characters
-                    True, if only latin characters present
+                    False, if string contains other than english alphabet, spaces, or characters (, ), /, '
+                    True, if only english alphabet or defined punctuation are present
         """
         valid = True
         for i in enumerate(word):
-            if i[1] not in ascii_letters or i[1] not in self._exceptions:
+            if i[1] not in ascii_letters and i[1] not in self._exceptions:
                 valid = False
         return valid
 
