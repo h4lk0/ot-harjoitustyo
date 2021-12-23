@@ -21,6 +21,12 @@ Perusversio tarjoaa harjoituksia korean kielen sanaston kertaamiseen.
   3. Opettelukortti
    - Sanojen kertausta perinteisellä muistelulla. Ohjelma arpoo koreankielisen sanan, jonka käännöksen voi tarkistaa napinpainalluksella. Kielten välillä voi liikkua rajattomasti, kunnes käyttäjä arpoo uuden sanan
 
+### Sanalistanäkymä
+ - Käyttäjä voi luoda uuden sanalistan
+ - Olemassa oleviin sanalistoihin voi lisätä uusia sanoja
+  - Yksitellen
+  - .csv-tiedostosta
+
 ## Jatkokehitysideoita
 
 - Lisää tehtävätyyppejä
