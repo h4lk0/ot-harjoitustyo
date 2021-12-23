@@ -1,7 +1,7 @@
 # Ohjelmistotekniikan harjoitustyö
 Käyttäjä voi sovelluksen avulla tehdä korean kielen sanastoon liittyviä harjoituksia.
 ## Python-versio
-Sovellus vaatii vähintään Pythonin version `3.8.x`
+Sovellus vaatii vähintään Pythonin version `3.8.x`.
 ## Dokumentaatio
 - [Arkitehtuurikuvaus](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/arkitehtuuri.md)
 - [Käyttöohje](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/kayttoohje.md)
