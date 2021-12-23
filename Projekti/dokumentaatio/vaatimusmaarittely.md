@@ -2,22 +2,29 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen tarkoitus on tarjota käyttäjälle ohjelma, jolla voi suorittaa kieltenopiskeluun liittyvää kertausta.
+Sovellus tarjoaa käyttäjälle tehtäviä vieraan kielen sanaston kertaukseen.
 
 ## Perusversion tarjoama toiminnallisuus
 
-- Valikko, jossa
-  - Valitaan tehtävätyyppi [TEHTY/MUOKATTAVANA]
-  - Lisätään sanalistoja [TEHTY]
+Perusversio tarjoaa harjoituksia korean kielen sanaston kertaamiseen.
+### Valikko
 
-- Harjoituksia
-  - Sanaston kertaus ns. *flashcardien* avulla [ALUSTAVA VERSIO]
-  - Sanaston kertaus monivalinnalla [TEHTY/MUOKATTAVANA]
-  - Verbien taivutusten kertaus monivalinnalla
-  - Mahdollisuus lisätä omia sanoja ja tehdä omia sanalistoja [TEHTY]
-  
+- Käyttäjä voi valita suorittavansa tehtäviä tai hallinnoivansa sanalistoja
+ 
+### Harjoitukset
+- Tehtävävalikko, jossa käyttäjä valitsee tehtävätyypin ja kerrattavan sanaston
+- Kolme harjoitustyyppiä
+  1. Monivalinta jossa 
+   - Käyttäjä valitsee annettua koreankielistä sanaa vastaavan englanninkielisen sanan viidestä vaihtoehdosta
+  2. Tyhjä aukko
+   - Käyttäjä kirjoittaa annettua sanaa vastaavan englanninkielisen sanan
+  3. Opettelukortti
+   - Sanojen kertausta perinteisellä muistelulla. Ohjelma arpoo koreankielisen sanan, jonka käännöksen voi tarkistaa napinpainalluksella. Kielten välillä voi liikkua rajattomasti, kunnes käyttäjä arpoo uuden sanan
+
 ## Jatkokehitysideoita
 
-- Lisää erilaisia tehtävätyyppejä [ALUSTAVA]
-- Sanalistojen tuonti tiedostosta [TEHTY]
-- Vaihtoehtoisia kieliä
+- Lisää tehtävätyyppejä
+- Parempi käyttöliittymä niin ulkoisesti kuin koodillisestikin
+- Sanalistojen ja tietueiden poistaminen
+- Teemat, jotka yhdistävät eri sanalistoja
+- Mahdollisuus valita eri kieliä
