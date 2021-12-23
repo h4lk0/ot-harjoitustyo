@@ -1,4 +1,4 @@
-from database.database_methods import Database
+from services.database_methods import DatabaseMethods
 from tkinter import filedialog, StringVar, Toplevel, ttk
 
 class ListView:
@@ -8,7 +8,7 @@ class ListView:
         self._top = Toplevel(self._root)
         self._top.title("List management")
         self._list_name = None
-        self._db = Database()
+        self._db = DatabaseMethods()
 
         self._initialize()
 

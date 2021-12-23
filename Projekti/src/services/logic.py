@@ -1,5 +1,5 @@
 from random import choice, choices
-from database.database_methods import Database
+from services.database_methods import DatabaseMethods
 
 class Logic:
 
@@ -7,7 +7,7 @@ class Logic:
     """
 
     def __init__(self, table):
-        self._db = Database()
+        self._db = DatabaseMethods()
         self._wordlist = None
         self._table = table
 

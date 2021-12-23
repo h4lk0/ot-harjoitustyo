@@ -1,16 +1,15 @@
-import sqlite_utils as sql
-from config import DATABASE_FILE_PATH
+from database.database_connection import get_connection
 from services.csv_handler import ListFromCSV
 from services.valid_entry_check import Checks
 
-class Database:
+class DatabaseMethods:
     """Class responsible for database management
     """
 
     def __init__(self):
         """Creates a new database management interface
         """
-        self._db = sql.db.Database(DATABASE_FILE_PATH)
+        self._db = get_connection()
         self._checker = Checks()
         self.converter = ListFromCSV()
 
