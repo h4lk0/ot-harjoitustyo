@@ -21,7 +21,7 @@ Testaamatta jäivät jne.
 
 ## Järjestelmätestaus
 
-Järjestelmätestit on suoritettu manuaalisesti.
+Järjestelmätestit on suoritettu manuaalisesti Linux-ympäristössä.
 
 ### Asennus ja konfigurointi
 
