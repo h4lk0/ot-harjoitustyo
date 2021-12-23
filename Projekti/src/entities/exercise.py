@@ -29,6 +29,4 @@ class Exercise:
                     True, if given string is in the english entry
                     False, if not
         """
-        if chosen in self._answer["eng"]:
-            return True
-        return False
+        return chosen in self._answer["eng"]
