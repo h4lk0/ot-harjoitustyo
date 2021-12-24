@@ -1,4 +1,5 @@
-from tkinter import IntVar, StringVar, ttk
+from tkinter import IntVar, StringVar, ttk, Label
+from tkinter.constants import LEFT, RIGHT
 
 from entities.exercise import Exercise
 from services.table_getter import TableGetter
@@ -29,12 +30,12 @@ class ExerciseView:
         btn_mc = ttk.Button(master=self._frame, text="Multiple choice", command=self._handle_show_mc)
         btn2 = ttk.Button(master=self._frame, text="Fill in", command=self._handle_show_fillin)
         btn_fc = ttk.Button(master=self._frame, text="Flashcard", command=self._handle_show_fc)
-        btn_back = ttk.Button(master=self._frame, text="Back", command=self._handle_back_to_start)
+        btn_back = ttk.Button(master=self._frame, text="Back to menu", command=self._handle_back_to_start)
 
-        btn_back.grid(row=3, column=0)
-        btn_mc.grid(row=1, column=1)
-        btn2.grid(row=1, column=2)
-        btn_fc.grid(row=1, column=3)
+        btn_back.grid(row=7, column=0, pady=5, columnspan=2)
+        btn_mc.grid(row=1, column=0, padx=3, pady=1, columnspan=2, sticky="ew")
+        btn2.grid(row=2, column=0, padx=3, pady=1, columnspan=2, sticky="ew")
+        btn_fc.grid(row=3, column=0, padx=3, pady=1, columnspan=2, sticky="ew")
         
     def _initialize_dropdown(self):
         label = ttk.Label(master=self._frame, text="Select list:")
@@ -46,8 +47,8 @@ class ExerciseView:
         self._wordlist.bind("<<ComboboxSelected>>", self._update)
         self._listvar.set("Nouns")
 
-        self._wordlist.grid(row=0, column=1, columnspan=4)
-        label.grid(row=1, column=0)
+        self._wordlist.grid(row=0, column=1, sticky="w")
+        label.grid(row=0, column=0, sticky="e", padx=2, pady=10)
 
     def _update(self, event):
         self._table = self.get_wordlist()
@@ -77,14 +78,14 @@ class MultipleChoiceView:
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        self._question = ttk.Label(master=self._frame, text="")
-        self._question.grid(row=0, column=2, columnspan=5)
+        self._question = Label(master=self._frame, text="", font=("",36), borderwidth=1, relief="solid", width=5, height=2)
+        self._question.grid(row=0, column=0, columnspan=4, rowspan=2, sticky="n", pady=10)
 
         self._initialize_radiobuttons()
         self._initialize_buttons()
 
-        self._result = ttk.Label(master=self._frame, text="")
-        self._result.grid(row=3, column=1)
+        self._result = ttk.Label(master=self._frame, text="", font=("", 12))
+        self._result.grid(row=3, column=0, columnspan=4)
 
         self._new_exercise()
         self.pack()
@@ -95,6 +96,8 @@ class MultipleChoiceView:
         self._options = self._exercise.get_options()
         self._btn_next.state(("disabled",))
         self._btn_check.state(("!disabled",))
+        for radio in self._radiobuttons:
+            radio.state(("!disabled",))
         self._update_values()
         self._sel.set(None)
         self._result["text"] = ""
@@ -108,18 +111,18 @@ class MultipleChoiceView:
         btn_back = ttk.Button(master=self._frame, text="Back", command=self._handle_return)
         self._btn_check = ttk.Button(master=self._frame, text="Check", command=self._check_answer)
         self._btn_next = ttk.Button(master=self._frame, text="Next", command=self._new_exercise)
-        self._btn_next.state(("disabled",))
+        self._btn_next.state(("!disabled",))
         self._btn_check.state(("disabled",))
 
-        btn_back.grid(row=2, column=0)
-        self._btn_check.grid(row=2, column=2)
-        self._btn_next.grid(row=2, column=1)
+        btn_back.grid(row=10, column=0, columnspan=4, pady=10)
+        self._btn_check.grid(row=4, column=0, sticky="wns", rowspan=3, padx=2)
+        self._btn_next.grid(row=7, column=0, sticky="wns", rowspan=2, padx=2)
 
     def _initialize_radiobuttons(self):
         self._sel = IntVar()
         for i in range(0,5):
             radio = ttk.Radiobutton(master=self._frame, text="", variable=self._sel, value=i)
-            radio.grid(row=1, column=i)
+            radio.grid(row=i+4, column=1, sticky="w")
             self._radiobuttons.append(radio)
 
     def _check_answer(self):
@@ -127,11 +130,13 @@ class MultipleChoiceView:
         correct = self._exercise.check(attempt)
         self._btn_next.state(("!disabled",))
         self._btn_check.state(("disabled",))
+        for radio in self._radiobuttons:
+            radio.state(("disabled",))
         if correct:
             self._result["text"] = "Correct!"
         else:
             ans = self._answer["eng"]
-            self._result["text"] = f"Wrong! Answer: {ans}"
+            self._result["text"] = f"Wrong! Correct answer is {ans}"
         self._sel.set(None)
 
     def pack(self):
@@ -159,16 +164,16 @@ class FillInView:
         self._entry = ttk.Entry(master=self._frame, textvariable=self._sv)
         self._sv.trace_add("write", callback=self._able_check)
 
-        self._label = ttk.Label(master=self._frame, text="")
-        self._result = ttk.Label(master=self._frame, text="")
+        self._word = Label(master=self._frame, text="", font=("",36), borderwidth=1, relief="solid", width=7, height=1)
+        self._word.grid(row=0, column=0, rowspan=2, pady=5, columnspan=2)
+        self._result = ttk.Label(master=self._frame, text="", font=(("", 14)))
         txt = ttk.Label(master=self._frame, text="Answer:")
+        
+        txt.grid(row=3, column=0, sticky="e")
+        self._entry.grid(row=3, column=1, pady=2)
+        self._result.grid(row=2, column=0, columnspan=2, sticky="n")
+
         self._initialize_buttons()
-
-        self._label.grid(row=0, column=0)
-        self._result.grid(row=2, column=0)
-        txt.grid(row=1, column=0, sticky="e")
-        self._entry.grid(row=1, column=1)
-
         self._new_exercise()
 
         self.pack()
@@ -180,9 +185,9 @@ class FillInView:
         self._btn_next.state(("disabled",))
         btn_back = ttk.Button(master=self._frame, text="Back", command=self._handle_return)
 
-        btn_back.grid(row=3, column=0)
-        self._btn_next.grid(row=3, column=1)
-        self._btn_check.grid(row=3, column=2)
+        btn_back.grid(row=6, column=0, sticky="ew", pady=5, columnspan=2)
+        self._btn_next.grid(row=5, column=1, sticky="ew", pady=2)
+        self._btn_check.grid(row=5, column=0, sticky="ew", pady=2)
 
     def _new_exercise(self):
         self._exercise.new_values()
@@ -190,7 +195,7 @@ class FillInView:
         self._update_values()
 
     def _update_values(self):
-        self._label["text"] = self._answer["kor"]
+        self._word["text"] = self._answer["kor"]
 
     def _check_answer(self):
         attempt = self._entry.get()
@@ -201,7 +206,7 @@ class FillInView:
             self._result["text"] = "Correct!"
         else:
             ans = self._answer["eng"]
-            self._result["text"] = f"Wrong! Answer: {ans}"
+            self._result["text"] = f"Wrong! Correct answer is {ans}"
     
     def _able_check(self, var, index, mode):
         if len(self._sv.get()) > 0:
@@ -237,8 +242,8 @@ class Flashcard:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
         self._sv = StringVar()
-        self._label = ttk.Label(master=self._frame, textvariable=self._sv)
-        self._label.grid(row=0, column=0, columnspan=3)
+        self._label = Label(master=self._frame, textvariable=self._sv, font=("",36), borderwidth=2, relief="ridge", width=7, height=3, bg="#F3ECE2")
+        self._label.grid(row=0, column=0, columnspan=3, pady=10)
         
         self._initialize_buttons()
         self._new_word()
@@ -246,13 +251,13 @@ class Flashcard:
 
     def _initialize_buttons(self):
         btn_flip = ttk.Button(master=self._frame, text="Flip", command=self._flip)
-        btn_flip.grid(row=1, column=1, columnspan=3)
+        btn_flip.grid(row=1, column=0, columnspan=3, sticky="we")
 
         btn_back = ttk.Button(master=self._frame, text="Back", command=self._handle_return)
-        btn_back.grid(row=3, column=1)
+        btn_back.grid(row=3, column=1, pady=3)
 
         btn_next = ttk.Button(master=self._frame, text="Next", command=self._new_word)
-        btn_next.grid(row=2, column=1)
+        btn_next.grid(row=2, column=1, pady=1)
 
     def _new_word(self):
         self._exercise.new_values()

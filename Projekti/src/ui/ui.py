@@ -12,7 +12,7 @@ class Ui:
 
         self._main_frame.pack(anchor="center")
         self._exit_btn()
-        self._exit_frame.pack(anchor="e", padx=150)
+        self._exit_frame.pack(anchor="n")
         self._exit_frame.lower()
 
         self._start()
@@ -22,7 +22,7 @@ class Ui:
 
     def _exit_btn(self):
         exit_button = ttk.Button(master=self._exit_frame, text="Quit", command=quit)
-        exit_button.pack()
+        exit_button.pack(fill="x")
 
     def _hide_current_view(self):
         if self._current_view:

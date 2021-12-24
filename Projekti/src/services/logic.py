@@ -1,4 +1,4 @@
-from random import choice, choices
+from random import choice, sample
 from services.database_methods import DatabaseMethods
 
 class Logic:
@@ -24,7 +24,7 @@ class Logic:
         """
         if self._wordlist is None:
             self._wordlist = self._fetch_wordlist()
-        options = choices(self._wordlist, k=5)
+        options = sample(self._wordlist, k=5)
         answer = choice(options)
 
         return answer, options

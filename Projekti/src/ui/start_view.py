@@ -18,21 +18,21 @@ class StartView:
         button1 = ttk.Button(master=self._frame, text="Exercises", command=self._handle_show_exercise_view)
         button2 = ttk.Button(master=self._frame, text="Manage lists", command= lambda: ListView(self._root))
 
-        button1.grid(row=2, column=0, padx=15, pady=5)
-        button2.grid(row=2, column=2, padx=15, pady=5)
+        button1.grid(row=2, column=1, columnspan=3, pady=2, sticky="ew")
+        button2.grid(row=3, column=1, columnspan=3, pady=2, sticky="ew")
 
         self.pack()
 
     def _welcome_text(self):
         label = ttk.Label(master=self._frame, text="WELCOME!")
-        label.grid(row=0, columnspan=3)
+        label.grid(row=0, columnspan=5)
 
     def _text_box(self):
         message = "Click 'Exercises' to choose exercise or manage wordlists with 'Manage lists'"
         text_box = Text(self._frame, height=3, width=40, borderwidth=3)
         text_box.insert('end', message)
         text_box.config(state="disabled")
-        text_box.grid(row=1, column=0, columnspan=3)
+        text_box.grid(row=1, column=0, columnspan=5, pady=5)
 
     def pack(self):
         self._frame.pack()

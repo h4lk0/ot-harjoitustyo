@@ -4,12 +4,11 @@ from ui.ui import Ui
 def main():
     window = Tk()
     window.title("Language practice")
-    window.geometry("700x400")
+    window.geometry("500x375")
     theme = ttk.Style()
     theme.theme_use("alt")
 
     Ui(window)
-    theme.configure("main_frame", background="red")
 
     window.mainloop()
 
