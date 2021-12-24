@@ -1,12 +1,13 @@
 # Ohjelmistotekniikan harjoitustyö
-Käyttäjä voi sovelluksen avulla tehdä vieraan kielen sanastoon liittyviä kertaustehtäviä.
+Käyttäjä voi sovelluksen avulla tehdä korean kielen sanastoon liittyviä harjoituksia.
 ## Python-versio
-Sovelluksen toiminta on testattu Pythonin versiolla `3.8`, sovellus ei välttämättä ole yhteensopiva vanhempien Python-versioiden kanssa.
+Sovellus vaatii vähintään Pythonin version `3.8.x`.
 ## Dokumentaatio
-- [Alustava määrittelydokumentti](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/vaatimusmaarittely.md)
-- [Työaikakirjanpito](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/tuntikirjanpito.md)
 - [Arkitehtuurikuvaus](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/arkitehtuuri.md)
-- [Release](https://github.com/h4lk0/ot-harjoitustyo/releases/tag/viikko6)
+- [Käyttöohje](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/kayttoohje.md)
+- [Määrittelydokumentti](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/vaatimusmaarittely.md)
+- [Testausdokumentti](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/testaus.md)
+- [Työaikakirjanpito](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/dokumentaatio/tuntikirjanpito.md)
 
 ## Asennus
 
@@ -42,7 +43,7 @@ Testikattavuusraportin voi luoda kommennolla:
 poetry run invoke coverage-report
 ```
 
-Koodin muotoilun voi tarkistaa komennolla:
+Koodin muotoilun voi tarkistaa komennolla. Tarkistukset on määritelty tiedostossa [.pylintrc](https://github.com/h4lk0/ot-harjoitustyo/blob/master/Projekti/.pylintrc):
 
 ```bash
 poetry run invoke lint
