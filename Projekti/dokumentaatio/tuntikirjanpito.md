@@ -15,11 +15,9 @@
 | 13.12.| 4,0  | Graafisen käyttöliittymän koodausta
 | 14.12.| 3,0  | Koodausta
 | 14.12.| 1,5  | Dokumentaation tekoa
-| Yhteensä | 31| 
-
-## TODO
-- Koodin rakenteen järkevöittäminen labtools-kommenttien perusteella (WiP)
-
-- **Testien tekemiseen syvempi tutustuminen ja testien kirjoittaminen**
-
-- Graafinen käyttöliittymä (WiP)
+| 20.12.| 5,0  | GUI:n koodausta
+| 21.12.| 1,5  | GUI:n koodausta
+| 22.12.| 5,5  | Koodausta
+| 23.12.| 13,5 | Koodaus, testien koodaus, dokumentaatio
+| 24.12.| 3,5  | GUI:n viimeistely
+| Yhteensä | 60| 
