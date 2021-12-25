@@ -15,9 +15,9 @@ Tietokantaan tietoa lisäävää tiedostoa käsittelevät metodit käyttävät o
 
 Testeistä on jätetty pois kaikki käyttöliittymään liittyvä koodi. Seuraava kuva kertoo testauksen haaraumakattavuudesta.
 
-[KUVA]
+![test_coverage](https://user-images.githubusercontent.com/56031728/147383511-ceabb023-02a6-4c4e-96cb-e0eb70ad96d8.png)
 
-Testaamatta jäivät jne.
+Testaamatta jäivät *config*-tiedoston poikkeuksenkäsittely ja osa *database_methods*-tiedoston riveistä.
 
 ## Järjestelmätestaus
 
